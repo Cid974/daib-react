@@ -88,7 +88,12 @@ const App = () => {
           {data.array.map((info) => (
             <li key={info.id}>
               {info.title}({info.content})
-              <button onClick={() => onRemove(info.id)}>삭제</button>
+              <Button
+                Text={"삭제"}
+                FontColor={"red"}
+                OnClick={() => onRemove(info.id)}
+              />
+              {/* <button onClick={() => onRemove(info.id)}>삭제</button> */}
             </li>
           ))}
         </ul>
