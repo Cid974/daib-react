@@ -1,20 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class Input extends React.Component {
-  render() {
-    return (
-      <>
-        <input
-          name={this.props.Name}
-          placeholder={this.props.Placeholder}
-          value={this.props.Value}
-          onChange={(event) => this.props.OnChange(event)}
-        />
-      </>
-    );
-  }
-}
+const Input = (props) => {
+  return (
+    <>
+      <input
+        name={props.Name}
+        placeholder={props.Placeholder}
+        value={props.Value}
+        onChange={(event) => props.OnChange(event)}
+      />
+    </>
+  );
+};
 
 Input.propTypes = {
   Name: PropTypes.string.isRequired,
